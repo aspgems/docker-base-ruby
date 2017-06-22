@@ -1,3 +1,4 @@
+MAINTAINER aspgems
 FROM ruby:2.3-slim
 
 ENV APP_HOME=/app
