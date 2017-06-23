@@ -1,6 +1,15 @@
 FROM ruby:2.3-slim
 MAINTAINER aspgems
 
+RUN apt-get update && \
+  apt-get install -qq -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    nodejs \
+    tzdata \
+    libxml2-dev \
+    libxslt-dev
+
 ENV APP_HOME=/app
 
 ENV BUNDLE_PATH=$APP_HOME/vendor/bundle
